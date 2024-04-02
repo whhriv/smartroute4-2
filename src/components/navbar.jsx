@@ -87,7 +87,7 @@ function NavBar() {
           <Nav.Link className="tabsedit ms-5 pt-0 pb-0 mt-4 me-4" href="/EditRoute">edit</Nav.Link>
         </Nav.Item>
     </Nav>
-        <Navbar.Brand className=" pink " href="/editRoute">
+        <Navbar.Brand className=" pink " href="/CreateRoute">
         
             <Image src="/smart_route_small_logo.png" alt="SmartRoute" style={{ height: '40px' }} />
         </Navbar.Brand>

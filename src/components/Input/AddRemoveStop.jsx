@@ -155,7 +155,7 @@ new Promise((resolve, reject)=>{
       </Button>
     </div>
     <div className="mb-5 pb-5 d-flex justify-content-center ">
-      <Button className="my-4 " variant="success" onClick={handleFormSubmit}>Generate Your Route</Button>
+      <Button className="my-4 addform " variant="success" onClick={handleFormSubmit}>Generate Your Route</Button>
     </div>
   </div>
 );

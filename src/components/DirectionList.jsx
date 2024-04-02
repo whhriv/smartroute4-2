@@ -28,7 +28,7 @@ function DirectionsList() {
       {routes.map((route, routeIndex) => (
         <div ref={targetRef} className="directionlist ps-3" key={routeIndex} >
 
-          <Button className="" onClick={() => toPDF()}>Download PDF</Button>
+          <Button className="pdfbutton" onClick={() => toPDF()}>Download PDF</Button>
 
           <h3 className='pt-3' style={{ textAlign: 'center', color: '#F708a5'}} >Directions</h3><br></br>
           {route.legs.map((leg, legIndex) => (
