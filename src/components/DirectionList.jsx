@@ -1,9 +1,13 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
+import { usePDF } from 'react-to-pdf';
 import Footer from './Footer';
+import { Button } from 'react-bootstrap'
 import '../main.css'
 
 function DirectionsList() {
+  const { toPDF, targetRef } = usePDF({filename: 'page.pdf'});
+
   const routesString = sessionStorage.getItem('directions');
   const routes = JSON.parse(routesString);
 
@@ -22,7 +26,10 @@ function DirectionsList() {
           <Container style={{ height: '80%'}}>
 
       {routes.map((route, routeIndex) => (
-        <div className="directionlist ps-3" key={routeIndex} >
+        <div ref={targetRef} className="directionlist ps-3" key={routeIndex} >
+
+          <Button className="pdfbutton" onClick={() => toPDF()}>Download PDF</Button>
+
           <h3 className='pt-3' style={{ textAlign: 'center', color: '#F708a5'}} >Directions</h3><br></br>
           {route.legs.map((leg, legIndex) => (
             <div className="ps-4" key={legIndex}>
