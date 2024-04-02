@@ -94,7 +94,7 @@ function Directions( {start, stops }){
       
   
         route.legs.forEach((leg, legIndex) => {
-            const legMaker = new google.maps.Marker({
+            const legMaker = new google.maps.Marker({ //google.maps.marker.AdvancedMarkerElement
               position: leg.start_location,
               map: map,
               icon: {
@@ -103,7 +103,7 @@ function Directions( {start, stops }){
                 labelOrigin: new google.maps.Point(20, 0),
               },
               label: {
-                text: `LEG ${legIndex+1}`,
+                text:(legIndex === 0) ? 'START' : `STOP ${legIndex+1}`.toString(),
                 fontSize: '14px',
                 fontWeight:'bold',
                 color: '#F708a5',

@@ -17,6 +17,7 @@ import MapSpaceOld from "./components/MapSpaceOld"
 import DirectionsList from './components/DirectionList';
 import Footer from './components/Footer'
 import InputStops from './components/Input/InputStops';
+import EditRoute from './components/Input/EditRoute';
 
 export default function App() {
   const [responses, setResponses] = useState(null)
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/" element={<ImageDisplay />} />
           {/* <Route path='/imagedisplay' element={<ImageDisplay />}/> */}
           <Route path='/mapspace' element={<MapSpace />}/>
+          <Route path='/editroute' element={<EditRoute />}/>
           <Route path='/directionslist' element={<DirectionsList />}/>
           <Route path='/createroute' element={<InputStops onResponseChange={handleResponsesChange} />}/>
           <Route path='/directions' element={<Directions />}/>
