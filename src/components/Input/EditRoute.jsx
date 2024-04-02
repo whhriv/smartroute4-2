@@ -7,10 +7,10 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
 const EditRoute = () => {
-  const startLoc = sessionStorage.getItem('startPoint'); // Get start location from sessionStorage
-  const waypoints = JSON.parse(sessionStorage.getItem('waypoints')); // Get waypoints from sessionStorage and parse JSON
-  const [startInput, setStartInput] = useState(startLoc); // Initialize startInput with startLoc
-  const [fields, setFields] = useState(waypoints.map((waypoint) => ({ value: waypoint }))); // Initialize fields with waypoints
+  const startLoc = sessionStorage.getItem('startPoint');
+  const waypoints = JSON.parse(sessionStorage.getItem('waypoints'));
+  const [startInput, setStartInput] = useState(startLoc); 
+  const [fields, setFields] = useState(waypoints.map((waypoint) => ({ value: waypoint }))); // INIT fields with waypoints
   const navigate = useNavigate();
 
   const handleChangeStart = (e) => {
