@@ -31,7 +31,7 @@ export default function Footer() {
       ));
 
   return (
-    <MDBFooter bgColor='light' className='text-start text-lg-left'>
+    <MDBFooter bgColor='light' className='text-start text-lg-left' style={{ position: 'fixed', bottom: 0}}>
       <MDBContainer className='footer' style={{margin:"0px"}} >
         <MDBRow>
             <MDBCol size='auto'>
