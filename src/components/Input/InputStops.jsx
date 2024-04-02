@@ -170,7 +170,7 @@ new Promise((resolve, reject)=>{
         }}
       />
         </FloatingLabel>
-        <Button className="ms-2" variant="outline-danger" style={{backgroundColor:"#F708a5",color:"white"}} size="lg" onClick={() => removeField(index)}>
+        <Button className="ms-2 " variant="outline-danger" style={{backgroundColor:"#F708a5",color:"white"}} size="lg" onClick={() => removeField(index)}>
           -
         </Button>
       </div>
@@ -178,7 +178,7 @@ new Promise((resolve, reject)=>{
     }
     {/* {initAutocompleteAllFields(fields)} */}
     <div className="mt-3 mb-1 me-5 d-flex justify-content-end">
-      <Button variant="primary" className="btnsize"  onClick={addField}>+
+      <Button variant="primary" className="btnsize addform"  onClick={addField}>+
       </Button>
     </div>
     <div className="mb-5 pb-5 d-flex justify-content-center">
