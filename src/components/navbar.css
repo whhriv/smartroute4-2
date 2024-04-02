@@ -70,5 +70,25 @@ li button {
   color: black;
   font-family: 'Lato', sans-serif; 
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: color 0.3s ease;
+  /* border: 1px solid; */
 
+
+  /* hover-color: #fff;
+  hover-bg: #F708a5;
+  hover-border-color: #F708a5;
+  focus-shadow-rgb: 49, 132, 253;
+  active-color: #fff;
+  active-bg: #F708a5;
+  active-border-color: #F708a5; */
+
+}
+.tabs:hover {
+  color: #F708a5;
+}
+.tabs:active {
+  background-color: #A1C65B
+}
+.nav-pills .nav-link {
+  /* border: none !important;  */
 }

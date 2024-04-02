@@ -18,13 +18,13 @@ function NavBar() {
     <Nav variant="pills" className="mx-auto flex-column flex-sm-row">
 
         <Nav.Item>
-            <Nav.Link className="tabs me-4" href="/MapSpaceOld">  VIEW  </Nav.Link>
+            <Nav.Link className="tabs me-3" href="/MapSpaceOld">  VIEW  </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link className="tabs" href="/DirectionsList">  LIST  </Nav.Link>
         </Nav.Item>
     </Nav>
-        <Navbar.Brand className=" pink " href="/">
+        <Navbar.Brand className=" pink " href="/CreateRoute">
         
             <Image src="/smart_route_small_logo.png" alt="SmartRoute" style={{ height: '40px' }} />
         </Navbar.Brand>

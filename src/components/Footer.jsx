@@ -42,8 +42,10 @@ export default function Footer() {
               <span className="timeDuration ">Route Time: {timeDuration} minutes</span>
               <span className="ps-5"><br></br><b>Starting Location: </b>{start},</span><br></br><span><b>Stops </b><br></br>{waypointsWithSpaces}</span>
    
-   
       </MDBCol>
+      <MDBCol>              <p style={{ fontSize: 'x-small', textAlign: 'end' }}>&copy; 2024 SmartRoute W.C.C.C all rights reserved</p>
+   
+</MDBCol>
         </MDBRow>
       </MDBContainer>
     </MDBFooter>
