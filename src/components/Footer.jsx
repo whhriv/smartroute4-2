@@ -5,6 +5,7 @@ import {
   MDBCol,
   MDBRow
 } from 'mdb-react-ui-kit';
+import './navbar.css'
 import GoogleMapsLink from './Mapping/GoogleMapsLink'
 export default function Footer() {
     let timeDuration = sessionStorage.getItem("FooterTime");
@@ -31,10 +32,10 @@ export default function Footer() {
       ));
 
   return (
-    <MDBFooter bgColor='light' className='text-start text-lg-left' style={{ position: 'fixed', bottom: 0}}>
-      <MDBContainer className='footer' style={{margin:"0px"}} >
-        <MDBRow>
-            <MDBCol size='auto'>
+    <MDBFooter bgColor='light' className='text-start text-lg-left mdbfooter' style={{ position: 'sticky', bottom: 0, width: '100%', }}>
+      <MDBContainer className='footer ps-3' style={{margin: 0, padding: 0, }} >
+        <MDBRow style={{ paddingInlineEnd: '50px'}}>
+            <MDBCol className='' size='auto'>
            
               <GoogleMapsLink /> 
             </MDBCol>
@@ -46,13 +47,14 @@ export default function Footer() {
       <MDBCol>              <p style={{ fontSize: 'x-small', textAlign: 'end' }}>&copy; 2024 SmartRoute W.C.C.C all rights reserved</p>
    
 </MDBCol>
+
         </MDBRow>
       </MDBContainer>
     </MDBFooter>
   )
     }else{
       return (
-        <MDBFooter bgColor='light' className='text-start text-lg-left'>
+        <MDBFooter bgColor='light' className='text-start text-lg-left'style={{ position: 'sticky', bottom: 0, width: '100vh'}}>
           <MDBContainer className='footer'>
             <MDBRow>
                 <MDBCol size='auto'>

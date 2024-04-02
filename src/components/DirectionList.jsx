@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container'
 import Footer from './Footer';
 import '../main.css'
 
@@ -18,6 +19,8 @@ function DirectionsList() {
 
   return (
     <div className="" >
+          <Container style={{ height: '80%'}}>
+
       {routes.map((route, routeIndex) => (
         <div className="directionlist ps-3" key={routeIndex} >
           <h3 className='pt-3' style={{ textAlign: 'center', color: '#F708a5'}} >Directions</h3><br></br>
@@ -37,8 +40,10 @@ function DirectionsList() {
           ))}
         </div>
       ))}
+      </Container>
       <Footer /> 
     </div>
+   
   );
 }
 ;
