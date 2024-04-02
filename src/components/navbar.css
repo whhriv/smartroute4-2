@@ -63,3 +63,11 @@ li button {
     font-family:  "Lucida Console", monospace;
     font-size: x-large
 }
+
+.tabs {
+ 
+  background-color: #A5F708;
+  color: black;
+  font-family: 'Lato', sans-serif; 
+
+}
