@@ -17,20 +17,20 @@ function DirectionsList() {
 // }
 
   return (
-    <div >
+    <div className="" >
       {routes.map((route, routeIndex) => (
-        <div className="directionlist" key={routeIndex} >
+        <div className="directionlist ps-3" key={routeIndex} >
           <h3>Directions</h3><br></br>
           {route.legs.map((leg, legIndex) => (
             <div key={legIndex}>
               {/* <h4>Leg {legIndex + 1}</h4> */}
 
               
-              {(legIndex==0)?<h4>{start} to {waypoint[0]}</h4>:<h4>{waypoint[legIndex-1]} to {(waypoint[legIndex]!=undefined)?waypoint[legIndex]:start}</h4>}
+              {(legIndex==0)?<h4 className="ps-2">{start} to {waypoint[0]}</h4>:<h4>{waypoint[legIndex-1]} to {(waypoint[legIndex]!=undefined)?waypoint[legIndex]:start}</h4>}
 
-              <ol>
+              <ol >
                 {leg.steps.map((step, stepIndex) => (
-                  <li key={stepIndex} dangerouslySetInnerHTML={{ __html: step.instructions }} />
+                  <li className="ps-3" key={stepIndex} dangerouslySetInnerHTML={{ __html: step.instructions }} />
                 ))}
               </ol>
             </div>

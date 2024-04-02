@@ -1,7 +1,7 @@
 
 
 
-
+import '../../main.css'
 import React, { useState, createContext, useContext } from "react";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
@@ -113,7 +113,7 @@ new Promise((resolve, reject)=>{
 
   return (
     
-    <div style={{borderRadius: '10%'}}>
+    <div className="main" style={{borderRadius: '10%'}}>
       <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbUVVfWx2Ghaty0_o6toUor2W2UZLH1ro&libraries=places"></script>
       <h5 class="topText">Mix and match stops -
         <br></br>
@@ -122,7 +122,8 @@ new Promise((resolve, reject)=>{
     <FloatingLabel className="ms-3 me-5 pe-2 pt-3 mb-5 flex-grow-1" controlId="start" label="Starting Point">
 
       <Form.Control
-        className="w-100"
+      style= {{ border: '1px solid black'}}
+        className="w-100 startinput"
         type="text"
         placeholder="Starting Point"
         value={start}
@@ -134,6 +135,7 @@ new Promise((resolve, reject)=>{
       <div key={index} className="ms-3 my-2 d-flex align-items-center ">
         <FloatingLabel controlId={`stop${index}`} label="Add Stop" className="flex-grow-1">
           <Form.Control
+            style= {{ border: '1px solid black'}}
             className="w-100 inputctrl"
             type="text"
             placeholder="Add Stop"
@@ -153,7 +155,7 @@ new Promise((resolve, reject)=>{
       </Button>
     </div>
     <div className="mb-5 pb-5 d-flex justify-content-center">
-      <Button className="my-4" variant="success" onClick={handleFormSubmit}>Generate Smart Route</Button>
+      <Button className="my-4 " variant="success" onClick={handleFormSubmit}>Generate Your Route</Button>
     </div>
   </div>
 );

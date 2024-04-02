@@ -9,13 +9,15 @@ input {
     border: black !important;
     /* border-radius: 50%; */
 }
-success {
+/* success {
     background-color: #A5F708 !important;
-    color: #08A5F7 !important
-}
+    color: #08A5F7 !important */
+/* } */
 .btn-success {
     background-color: #A5F708 !important;
     color: black !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+
 
 }
 /* .btn-outline-danger {
@@ -58,6 +60,8 @@ success {
     align-items: center;
     text-align: center;
     font-size: x-large;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+
 }
 
 .position-relative:hover .position-absolute {
@@ -110,4 +114,11 @@ body {
 .directionlist {
     background-color: #E6F6FE
 
+}
+.startinput {
+    border-color:  black !important;
+    border-style: solid;
+}
+.main {
+    font-family: 'Lato', sans-serif; 
 }

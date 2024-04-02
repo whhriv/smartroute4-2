@@ -69,5 +69,6 @@ li button {
   background-color: #A5F708;
   color: black;
   font-family: 'Lato', sans-serif; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 
 }
