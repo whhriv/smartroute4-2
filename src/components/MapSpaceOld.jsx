@@ -1,4 +1,5 @@
-// CONNORS CODE FOR INPUTS 3/13
+// import { AdvancedMarkerElement } from "@googlemaps/markerjs";
+
 
 import { useState, useEffect } from 'react'
 import {
@@ -89,16 +90,59 @@ function Directions( {start, stops }){
     
       res.routes.forEach((route, routeIndex) => {
         sessionStorage.setItem(`route${routeIndex}`, JSON.stringify(route));
-        console.log(`Route ${routeIndex + 1}:`, route);
+        // console.log(`Route ${routeIndex + 1}:`, route);
       
   
         route.legs.forEach((leg, legIndex) => {
-          console.log(`  Leg ${legIndex + 1}:`);
-          
-      
+            const legMaker = new google.maps.Marker({
+              position: leg.start_location,
+              map: map,
+              icon: {
+                url: '/smart_route_small_logo.png', 
+                scaledSize: new google.maps.Size(40, 40), 
+                labelOrigin: new google.maps.Point(20, 0),
+              },
+              label: {
+                text: `LEG ${legIndex+1}`,
+                fontSize: '14px',
+                fontWeight:'bold',
+                color: '#F708a5',
+                
+
+              }
+            })
+
+
+          let stopIndex =0
+
           leg.steps.forEach((step, stepIndex) => {
-            console.log(`    Step ${stepIndex + 1}:`, step);
-          });
+            
+
+                        // directionsRenderer.setOptions({
+                        //   markerOptions: {
+                        //     icon: {
+                        //       // url: '/smart_route_small_logo.png', 
+                        //       scaledSize: new google.maps.Size(40, 40), 
+                              
+                        //     },
+
+                        //     // label: (legIndex).toString(), 
+                        //     label: (stepIndex === 0) ? 'Start' : (stopIndex +1).toString(),
+                            
+
+                          
+                        //   },
+                        // });
+                        // if (stepIndex !==0) {
+                        //   stopIndex++
+                        // }
+
+                              });
+                          
+          // leg.steps.forEach((step, stepIndex) => {
+          //   // console.log(`    Step ${stepIndex + 1}:`, step);
+
+          // });
         });
       });
     
@@ -112,7 +156,7 @@ function Directions( {start, stops }){
       markerOptions: {
         icon: {
           url: '/smart_route_small_logo.png', 
-          scaledSize: new google.maps.Size(40, 40), 
+          scaledSize: new google.maps.Size(10, 10), 
           
         },
       },
@@ -122,7 +166,5 @@ function Directions( {start, stops }){
  let stretches = sessionStorage.getItem("waypoints")
  console.log('STRETCHES from MapSpace',stretches)
 
-
-
-
 }
+
