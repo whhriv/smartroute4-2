@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap'
 import '../main.css'
 
 function DirectionsList() {
-  const { toPDF, targetRef } = usePDF({filename: 'page.pdf'});
+  const { toPDF, targetRef } = usePDF({filename: 'directions.pdf'});
 
   const routesString = sessionStorage.getItem('directions');
   const routes = JSON.parse(routesString);
@@ -28,7 +28,7 @@ function DirectionsList() {
       {routes.map((route, routeIndex) => (
         <div ref={targetRef} className="directionlist ps-3" key={routeIndex} >
 
-          <Button className="pdfbutton" onClick={() => toPDF()}>Download PDF</Button>
+          <Button className="" onClick={() => toPDF()}>Download PDF</Button>
 
           <h3 className='pt-3' style={{ textAlign: 'center', color: '#F708a5'}} >Directions</h3><br></br>
           {route.legs.map((leg, legIndex) => (
